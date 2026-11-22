@@ -24,5 +24,41 @@
     "title": "1984",
     "author": "George Orwell",
     "reviews": {}
+  },
+  {
+    "isbn": "9780411524935",
+    "author": "Chinua Achebe",
+    "title": "Things Fall Apart",
+    "reviews": {}
+  },
+  { 
+    "isbn": "9780451524735",
+    "author": "Hans Christian Andersen",
+    "title": "Fairy tales",
+    "reviews": {} 
+  },
+  { 
+    "isbn": "9782051524935",
+    "author": "Dante Alighieri",
+    "title": "The Divine Comedy",
+    "reviews": {} 
+  },
+  {
+    "isbn": "9780451524915",
+    "author": "Unknown",
+    "title": "The Epic Of Gilgamesh", 
+    "reviews": {} 
+  },
+  { 
+    "isbn": "9780151524935",
+    "author": "Unknown",
+    "title": "The Book Of Job", 
+    "reviews": {} 
+  },
+  { 
+    "isbn": "9750451524935",
+    "author": "Unknown",
+    "title": "One Thousand and One Nights", 
+    "reviews": {} 
   }
 ]

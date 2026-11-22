@@ -43,10 +43,62 @@ router.get("/books/:isbn/reviews", (req, res) => {
 
 // Demonstrates Axios with async/await. The local API routes above are used
 // for the assignment; this helper can be called from another Node program.
+
 async function fetchBooksWithAxios(apiBaseUrl = "http://localhost:5000") {
-  const response = await axios.get(`${apiBaseUrl}/books`);
-  return response.data;
+    try {
+        const response = await axios.get(`${apiBaseUrl}/books`);
+        return response.data;
+    } catch (error) {
+        throw new Error(`Fetching books failed: ${error.message}`);
+    }
 }
+
+
+
+// Retrieve a book by ISBN using Axios
+async function fetchBookByISBN(isbn, apiBaseUrl = "http://localhost:5000") {
+    try {
+        const response = await axios.get(
+            `${apiBaseUrl}/books/isbn/${encodeURIComponent(isbn)}`
+        );
+        return response.data;
+    } catch (error) {
+        if (error.response?.status === 404) {
+            throw new Error("Book not found for this ISBN");
+        }
+        throw new Error(`ISBN lookup failed: ${error.message}`);
+    }
+}
+
+// Retrieve books by author using Axios
+async function fetchBooksByAuthor(author, apiBaseUrl = "http://localhost:5000") {
+    try {
+        const response = await axios.get(
+            `${apiBaseUrl}/books/author/${encodeURIComponent(author)}`
+        );
+        return response.data;
+    } catch (error) {
+        throw new Error(`Author lookup failed: ${error.message}`);
+    }
+}
+
+// Retrieve books by title using Axios
+async function fetchBooksByTitle(title, apiBaseUrl = "http://localhost:5000") {
+    try {
+        const response = await axios.get(
+            `${apiBaseUrl}/books/title/${encodeURIComponent(title)}`
+        );
+        return response.data;
+    } catch (error) {
+        throw new Error(`Title lookup failed: ${error.message}`);
+    }
+}
+
+// Export Axios helper functions
+module.exports.fetchBookByISBN = fetchBookByISBN;
+module.exports.fetchBooksByAuthor = fetchBooksByAuthor;
+module.exports.fetchBooksByTitle = fetchBooksByTitle;
+
 
 module.exports = router;
 module.exports.fetchBooksWithAxios = fetchBooksWithAxios;
