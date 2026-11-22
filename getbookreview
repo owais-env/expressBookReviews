@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 53
+ETag: W/"35-fJa0a6HtOaagdAYdzWiDj5eX9HA"
+Date: Sun, 22 Nov 2026 08:25:29 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+{"demo":"A timeless epic with memorable adventures."}

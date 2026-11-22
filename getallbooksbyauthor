@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 129
+ETag: W/"81-iNO0vVDb1jlE2JaTx48i7jeQbbg"
+Date: Sun, 22 Nov 2026 08:23:47 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+[{"isbn":"9780140449136","title":"The Odyssey","author":"Homer","reviews":{"demo":"A timeless epic with memorable adventures."}}]
